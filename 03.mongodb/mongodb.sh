@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /tmp
-git clone https://github.com/nareshkonangi9896/Roboshop-Shell.git
-cd Roboshop-Shell
+cd /home/centos
+git clone https://github.com/nareshkonangi9896/Roboshop-Shell-tf.git
+cd Roboshop-Shell-tf
 sh MongoDB.sh
