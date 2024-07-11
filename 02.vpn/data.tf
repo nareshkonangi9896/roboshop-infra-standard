@@ -1,7 +1,6 @@
 data "aws_vpc" "default" {
   default = true
 }
-
 data "http" "myip" {
   url = "https://ipv4.icanhazip.com"
 }
@@ -24,4 +23,8 @@ data "aws_ami" "devops_ami" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
+}
+
+data "aws_ssm_parameter" "vpn_sg_id" {
+  name = "/${var.project_name}/${var.environment}/vpn_sg_id"
 }
