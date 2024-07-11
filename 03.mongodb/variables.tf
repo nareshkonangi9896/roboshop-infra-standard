@@ -1,12 +1,7 @@
 variable "project_name" {
     default = "roboshop"
 }
-variable "sg_name" {
-    default = "mongodb"
-}
-variable "sg_description" {
-    default = "allowing traffic"
-}
+
 variable "comman_tags" {
     default = {
         Project = "roboshop"
@@ -17,4 +12,8 @@ variable "comman_tags" {
 }
 variable "environment" {
     default = "dev"
+}
+
+variable "zone_name" {
+    default = "nareshdevops.online"
 }
