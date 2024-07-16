@@ -24,6 +24,19 @@ pipeline {
                 '''
             }
         }
+        stage('Approve'){
+            steps{
+                input 'shall i apply'
+            }
+        }
+        stage('Apply'){
+            steps{
+                sh '''
+                    cd 01.vpc
+                    terraform apply -auto-approve
+                '''
+            }
+        }
     }
     post { 
         always { 
