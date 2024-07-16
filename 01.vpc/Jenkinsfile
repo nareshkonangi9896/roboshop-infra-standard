@@ -33,6 +33,8 @@ pipeline {
             steps{
                 sh '''
                     cd 01.vpc
+                    ls -ltr
+                    pwd
                     terraform apply -auto-approve
                 '''
             }
